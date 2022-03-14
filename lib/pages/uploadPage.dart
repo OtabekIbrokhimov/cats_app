@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cats_app/pages/detail_page.dart';
 import 'package:cats_app/pages/direct.page.dart';
 import 'package:cats_app/pages/myCat.dart';
 import 'package:cats_app/servise/http_servise.dart';
@@ -19,7 +20,7 @@ class _UploadPageState extends State<UploadPage> {
   void upload() async {
     HttpServise.MULTIPART(HttpServise.API_UPLOAD, widget.file!.path, HttpServise.bodyUpload(widget.file!.hashCode.toString())).then((value) {
       if(value != null) {
-        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MyCat()), (route) => route.isFirst);
+        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DetailPage()), (route) => route.isFirst);
       } else {
         UtilsServise.fireSnackBar("Something error", context);
       }

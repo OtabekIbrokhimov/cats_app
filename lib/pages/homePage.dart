@@ -4,10 +4,7 @@ import 'package:cats_app/servise/http_servise.dart';
 import 'package:cats_app/servise/utils_servise.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:http_parser/http_parser.dart';
-
 import '../model/catApp_model.dart';
-import '../model/model.test.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
